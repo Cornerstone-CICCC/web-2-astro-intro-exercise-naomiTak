@@ -1,0 +1,69 @@
+---
+import "../styles/global.css"
+import BaseLayout from "../layouts/BaseLayout.astro"
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
+const title = "Contact"
+---
+<BaseLayout pageTitle={title}>
+	<Header/>
+	<main>
+		<h2>Contact Us</h2>
+		<div class="contact-form">
+            <div class="form">
+                <strong><label for="name-form">Name:</strong></em><br>
+                <input type="text" id="name-form">
+            </div>
+            <div class="form">
+                <strong><label for="email-form">Email:</strong></em><br>
+                <input type="email" id="email-form">
+            </div>
+            <div class="from">
+                <strong><label for="message-form">Message:</strong></em><br>
+                <textarea id="message-form" rows="3">
+                </textarea>
+            </div>
+            <button>Send</button>
+        </div>
+	</main>
+	<Footer />
+</BaseLayout>
+
+</html>
+
+<style>
+	main{
+		margin: 10px auto;
+		padding: 20px;
+		background-color: white;
+		width: 800px;
+		border-radius: 8px;
+		box-shadow: 0 0 10px gray;
+		
+	}
+	.content{
+		width: 500px;
+		height: 300px;
+		background-color: blue;
+	}
+	.form{
+        margin: 10px 0;
+    }
+    input{
+        height: 1.5rem;
+    }
+    input, textarea{
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid rgb(170, 170, 170);
+    }
+    button{
+        width: 100%;
+        background-color: rgb(56, 56, 56);
+        color: white;
+        padding: 5px 0;
+    }
+    button:hover{
+        background-color: rgb(78, 78, 78);
+    }
+</style>
